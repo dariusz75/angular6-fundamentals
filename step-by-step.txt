@@ -1,1 +1,10 @@
-1. Go To app.component.html file to start editing the app
+to add bootstrap into the project we need to do the followings:
+
+1. in the project folder run
+    npm install --save bootstrap@3
+
+2. in angular.json file we need to add the path to the bootstrap css file, just before the general styles
+    "styles": [
+              "node_modules/bootstrap/dist/css/bootstrap.min.css",
+              "src/styles.css"
+            ],
