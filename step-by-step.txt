@@ -1,0 +1,1 @@
+1. Go To app.component.html file to start editing the app

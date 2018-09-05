@@ -6,5 +6,10 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'Angular 6';
+  name = 'Dariusz';
 }
+
+/*
+We have changed title to name in the AppComponent class
+Now we need to go to app.component.html file to use it in
+*/
