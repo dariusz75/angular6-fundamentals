@@ -1,10 +1,6 @@
-to add bootstrap into the project we need to do the followings:
+Dodanie nowego komponentu zaczniemy od utworzenia nowego folderu, ktory bedzie zawieral nasz komponent.
+Utworzymy go w katalogu app i nzawiemy server.
+Nastepnie w folderze srver tworzymy plik server.component.ts
 
-1. in the project folder run
-    npm install --save bootstrap@3
-
-2. in angular.json file we need to add the path to the bootstrap css file, just before the general styles
-    "styles": [
-              "node_modules/bootstrap/dist/css/bootstrap.min.css",
-              "src/styles.css"
-            ],
+Komponent to nic innego jak klasa wiec aby go utworzyc nalezy utworzyc klase.
+W tym celu przechodzimy do pliku server.component.ts
