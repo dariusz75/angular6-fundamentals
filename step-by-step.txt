@@ -1,6 +1,6 @@
 Dodanie nowego komponentu zaczniemy od utworzenia nowego folderu, ktory bedzie zawieral nasz komponent.
-Utworzymy go w katalogu app i nzawiemy server.
-Nastepnie w folderze srver tworzymy plik server.component.ts
+Utworzymy go w katalogu app i nazwiemy server.
+Nastepnie w folderze server tworzymy plik server.component.ts
 
 Komponent to nic innego jak klasa wiec aby go utworzyc nalezy utworzyc klase.
 W tym celu przechodzimy do pliku server.component.ts
