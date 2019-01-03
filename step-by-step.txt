@@ -1,6 +1,8 @@
-Dodanie nowego komponentu zaczniemy od utworzenia nowego folderu, ktory bedzie zawieral nasz komponent.
-Utworzymy go w katalogu app i nazwiemy server.
-Nastepnie w folderze server tworzymy plik server.component.ts
+Data binding sluzy do powiazania danych z komponentow z widokami html.
 
-Komponent to nic innego jak klasa wiec aby go utworzyc nalezy utworzyc klase.
-W tym celu przechodzimy do pliku server.component.ts
+Rozrozniamy 3 rodzaje data bindingu:
+1) Property Binding, gdzie komunikujemy sie z komponentu do widoku html - [target]="expression"
+2) Two-Way-Binding, gdzie komunikujemy sie z komponentu do widoku html i z widoku do komponentu - [(ngModel)]="expression"
+3) Event Binding - gdzie reagujemy na wydarzenia przesylajac dane z komponentu do widoku - (target)="statement"
+
+

@@ -1,7 +1,16 @@
-<h3>App Component</h3>
+<h3 class="text-center">Data Binding</h3>
 <hr>
 <div class="container">
-  <app-success-alert></app-success-alert>
-  <app-warning-alert></app-warning-alert>
-  <app-success-alert></app-success-alert>
+  <div>
+    <input [value]="inputText">
+  </div>
+  <div>
+    <input [(ngModel)]="inputText2Way">
+    {{inputText2Way}}
+  </div>
+  <div>
+    <input (click)="click($event)">
+    <button [disabled]="button">Add</button>
+    {{showClick}}
+  </div>
 </div>
