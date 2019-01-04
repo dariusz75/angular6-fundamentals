@@ -1,11 +1,13 @@
-<h3 [className]='colorClass'>Property Binding</h3>
+<h3 [className]='colorClass'>Event Binding</h3>
 <hr>
 <div class="container">
-  <div>
-    <input [maxLength]="maxLength" [value]="inputText">
-  </div>
-  <div>
-    <button (click)="change()">Add</button>
-  </div>
-  <img [src]="logoUrl">
+  <input [className]="backgroundClass" (focus)="onFocus()">
+  <br>
+  <input (input)="onInput($event)"> {{inputText}}
+  <br>
+  <input (mousemove)="onMouseMove($event)">{{x}} {{y}}
+  <br>
+  <input (paste)="onPaste()"> {{pasteWarning}}
+  <br>
+  <button (click)="change()">Change</button>
 </div>

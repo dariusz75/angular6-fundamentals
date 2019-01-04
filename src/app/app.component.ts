@@ -7,16 +7,35 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  inputText = 'Property Binding Text';
-  maxLength = 5;
+  inputText = '';
+  pasteWarning = '';
+  x = '';
+  y = '';
   colorClass = 'color-1';
+  backgroundClass = '';
   logoUrl = '';
+
+  onFocus() {
+    this.backgroundClass = 'color-3';
+  }
+
+  onInput(event) {
+    this.inputText = event.target.value;
+  }
+
+  onMouseMove(event) {
+    this.x = event.clientX;
+    this.y = event.clientY;
+  }
+
+  onPaste() {
+    this.pasteWarning = 'Please do not paste';
+
+  }
 
   change() {
     this.inputText = 'Text changed';
-    this.maxLength = 10;
     this.colorClass = 'color-2';
-    this.logoUrl = 'https://angular.io/assets/images/logos/angular/angular.svg';
   }
 }
 
