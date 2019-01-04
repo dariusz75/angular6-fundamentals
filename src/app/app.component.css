@@ -1,0 +1,15 @@
+.color-1 {
+  display: block;
+  text-align: center;
+  color: #52148d;
+}
+
+.color-2 {
+  display: block;
+  text-align: center;
+  color: #a52a2a;
+}
+
+img {
+  max-width: 100px;
+}

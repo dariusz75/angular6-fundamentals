@@ -8,13 +8,15 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   inputText = 'Property Binding Text';
-  inputText2Way = '';
-  button = true;
-  showClick = '';
+  maxLength = 5;
+  colorClass = 'color-1';
+  logoUrl = '';
 
-  click(event) {
-    this.showClick = 'Button activated';
-    this.button = false;
+  change() {
+    this.inputText = 'Text changed';
+    this.maxLength = 10;
+    this.colorClass = 'color-2';
+    this.logoUrl = 'https://angular.io/assets/images/logos/angular/angular.svg';
   }
 }
 

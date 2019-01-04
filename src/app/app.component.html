@@ -1,16 +1,11 @@
-<h3 class="text-center">Data Binding</h3>
+<h3 [className]='colorClass'>Property Binding</h3>
 <hr>
 <div class="container">
   <div>
-    <input [value]="inputText">
+    <input [maxLength]="maxLength" [value]="inputText">
   </div>
   <div>
-    <input [(ngModel)]="inputText2Way">
-    {{inputText2Way}}
+    <button (click)="change()">Add</button>
   </div>
-  <div>
-    <input (click)="click($event)">
-    <button [disabled]="button">Add</button>
-    {{showClick}}
-  </div>
+  <img [src]="logoUrl">
 </div>
