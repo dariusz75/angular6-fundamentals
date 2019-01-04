@@ -1,13 +1,11 @@
-<h3 [className]='colorClass'>Event Binding</h3>
+<h3>Property and Event Binding Combined</h3>
 <hr>
 <div class="container">
-  <input [className]="backgroundClass" (focus)="onFocus()">
+  <p>My name is {{name}} and I'm {{ocupation}}.</p>
+  <p>Name:</p>
+  <input [value]="name" (input)="changeName($event)">
   <br>
-  <input (input)="onInput($event)"> {{inputText}}
-  <br>
-  <input (mousemove)="onMouseMove($event)">{{x}} {{y}}
-  <br>
-  <input (paste)="onPaste()"> {{pasteWarning}}
-  <br>
-  <button (click)="change()">Change</button>
+  <p>Ocupation:</p>
+  <input [value]="ocupation" (input)="changeOcupation($event)">
+
 </div>
