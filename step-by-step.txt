@@ -1,8 +1,7 @@
 Data binding sluzy do powiazania danych z komponentow z widokami html.
 
-Rozrozniamy 3 rodzaje data bindingu:
-1) Property Binding, gdzie komunikujemy sie z komponentu do widoku html - [target]="expression"
-2) Two-Way-Binding, gdzie komunikujemy sie z komponentu do widoku html i z widoku do komponentu - [(ngModel)]="expression"
-3) Event Binding - gdzie reagujemy na wydarzenia przesylajac dane z komponentu do widoku - (target)="statement"
+Aby zastosowac two-way-binding musimy zaimportowac FormsModule w pliku app.module.ts
+A robimy to tak:
+import { FormsModule } from '@angular/forms';
 
-
+Od tej pory mozemy zaczac uzywac dyrektywy [(ngModel)]

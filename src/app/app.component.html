@@ -3,9 +3,9 @@
 <div class="container">
   <p>My name is {{name}} and I'm {{ocupation}}.</p>
   <p>Name:</p>
-  <input [value]="name" (input)="changeName($event)">
+  <input [value]="name" [(ngModel)]="name">
   <br>
   <p>Ocupation:</p>
-  <input [value]="ocupation" (input)="changeOcupation($event)">
+  <input [value]="ocupation" [(ngModel)]="ocupation">
 
 </div>
