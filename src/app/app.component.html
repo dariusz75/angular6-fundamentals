@@ -1,6 +1,7 @@
-<h3>Sending data to child component - @Input()</h3>
+<h1>{{ title }}</h1>
+<h3>Sending data to parent component - @Input()</h3>
 <hr>
 <div class="container">
-  <app-child [tasks]="tasksList"></app-child>
+  <app-child [tasks]="tasksList" (eventTask)="selected($event)"></app-child>
 
 </div>

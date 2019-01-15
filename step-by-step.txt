@@ -1,27 +1,8 @@
-Zadaniem tego rozdzialu, jest przekazanie danych z komponentu rodzica (app.component)
-do komponentu dziecka (child.component).
-Aby tego dokonac, musimy skorzystac z dekoratora @Input()
+Zadaniem tego rozdzialu, jest przekazanie danych z komponentu dziecka (child.component)
+do komponentu rodzica (app.component).
+Aby tego dokonac, musimy skorzystac z dekoratora @Output()
 
-Wtym celu przejdzmy do pliku child.component.ts
+Wtym celu przejdzmy do pliku child.component.html
 Nastepnie musimy:
-1) Zaimportowac dekorator Input - import { Component, OnInit, Input } from '@angular/core';
-2) Uzyc dekoratora input do wyprowadzenia danej wlasciwosci,
-   w naszym przypadku bedzie to wlasciwosc tasks.
-   @Input()
-   tasks;
-Od tej pory moge uzywac wlasciwosci tasks przypisujac je do kazdego komponentu jako html properties,
-za pomoca nawiasow klamrowych, np <app-child [tasks]></app-child>.
-
-Nastepnie przejdzmy do app.component.ts i zadeklarujmy tablice tasksList = ['Task One', 'Task Two', 'Task Three'];
-Gdy mamy juz tablice w komponencie rodzica mozemy ja przypisac do komponentu dziecka.
-W tym celu przejdzmy do pliku widoku rodzica (app.component.html), w ktorym zagniezdzamy widok html dziecka
-i przypiszmy tablice taskList do wlasciwosci tasks <app-child [tasks]="tasksList"></app-child>.
-
-Od tej pory mozemy iterowac po wlasciwosci tasks w naszym widoku html komponentu dziecka (child.component.html)
-<ul>
-  <li *ngFor="let task of tasks">
-    {{task}}
-  </li>
-</ul>
-
+1)
 
