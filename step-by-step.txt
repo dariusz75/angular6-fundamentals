@@ -2,7 +2,46 @@ Zadaniem tego rozdzialu, jest przekazanie danych z komponentu dziecka (child.com
 do komponentu rodzica (app.component).
 Aby tego dokonac, musimy skorzystac z dekoratora @Output()
 
-Wtym celu przejdzmy do pliku child.component.html
-Nastepnie musimy:
-1)
+W tym celu przejdzmy do pliku child.component.html i stworzmy sobie przycisk.
+Zaimplementujmy w nim click event i przypiszmy mu metode selsct(),
+ktora zaimplementujemy w naszym komponencie child.component.ts
+Metoda select() pobiera task, jak w ponizszym przykladzie.
+
+<ul>
+  <li *ngFor="let task of tasks">
+    {{task}}
+    <button (click)="select(task)"></button>
+  </li>
+</ul>
+
+Przejdzmy do pliku child.component.ts i wykonajmy nastepujace czynnosci:
+1) Zadeklarujmy metode select(task).
+2) Aby wyemitowac cos do gory, musimy zadeklarowac dekorator @Output()
+   oraz zaimportowac go z Angular Core - import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
+3) Nastepnie musimy stworzyc pole emitera o dowolnej nazwie
+   @Output()
+   eventTask
+4) Pole to musi byc specjalnym obiektem, event emiterem
+   @Output()
+   eventTask = new EventEmitter<string>();
+5) Teraz aby wyemitowac do gory nasz task z metody select(task),
+   musimy odwolac sie do naszego obiektu eventTask a nstepnie do jego metody emit
+   select(task) {
+    this.eventTask.emit(task);
+   }
+
+Teraz przechodzimy do nadrzednego komponentu, czyli do app.component.html i wykonajmy nastepujace czynnosci:
+1) Binduje eventTask (eventTask) i nadajemy mu dowolna nazwe - (eventTask)="selected($event)"
+   Parametr $event sluzy do odebrania eventu, i tak sie musi nazywac.
+   <app-child [tasks]="tasksList" (eventTask)="selected($event)"></app-child>
+
+Nastepnie przechodzimy do app.component.ts
+Teraz juz mozemy odebrac nasz task, deklarujac metode select
+selected(task: string) {
+    console.log(task);
+  }
+
+
+
+
 
