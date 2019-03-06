@@ -10,5 +10,7 @@ export class AppComponent {
   name = '';
   ocupation = '';
 
+  title = 'Angular Services';
+
 }
 
