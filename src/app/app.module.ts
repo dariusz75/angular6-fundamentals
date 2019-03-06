@@ -10,12 +10,8 @@ import { Clicker2Component } from './clicker2/clicker2.component';
 @NgModule({
   declarations: [
     AppComponent,
-<<<<<<< HEAD
-
-=======
     Clicker1Component,
     Clicker2Component
->>>>>>> 09-services
   ],
   imports: [
     BrowserModule,
