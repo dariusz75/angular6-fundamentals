@@ -1,10 +1,11 @@
-to add bootstrap into the project we need to do the followings:
+Aby uzyc servisu w komponencie musimy wykonac nastepujace czynnosci:
 
-1. in the project folder run
-    npm install --save bootstrap@3
+Przechodzimy do pliku app.component.ts i deklarujemy nasz serwis w dekoratorze @Component
+w nastepujacy sposob - providers: [ClickService].
+Od tej pory serwis dostepny bedzie w kazdym komponencie dziecku, pod warunkiem ze zostanie
+do tego komponentu wstrzykniety.
 
-2. in angular.json file we need to add the path to the bootstrap css file, just before the general styles
-    "styles": [
-              "node_modules/bootstrap/dist/css/bootstrap.min.css",
-              "src/styles.css"
-            ],
+Przejdzmy teraz do pliku clicker1.component.ts
+1) Importujemy serwis - import { ClickService } from '../services/click.service';
+2) Deklarujemy serwis w konstruktorze - constructor(private clickService: ClickService) { }
+3) Od tej pory mozemy odwolywac sie do naszego serwisu przez this.clickService

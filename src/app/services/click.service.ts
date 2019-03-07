@@ -11,6 +11,5 @@ export class ClickService {
 
   sumClicks(): void {
     this.summedClicks += 1;
-    console.log('Summed clicks: ' + this.summedClicks);
   }
 }
