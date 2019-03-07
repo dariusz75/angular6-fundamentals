@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ClickService } from '../services/click.service';
 
 @Component({
   selector: 'app-clicker1',
@@ -10,12 +11,13 @@ export class Clicker1Component implements OnInit {
   title = 'clicker1 Component';
   clicks = 0;
 
-  constructor() { }
+  constructor(private clickService: ClickService) { }
 
   ngOnInit() {
   }
 
   add(): void {
-    this.clicks += 1;
+
+    this.clickService.summedClicks += 1;
   }
 }
