@@ -19,6 +19,5 @@ export class Clicker1Component implements OnInit {
   add(): void {
 
     this.clickService.summedClicks += 1;
-    console.log(this.clickService.summedClicks);
   }
 }
