@@ -17,7 +17,7 @@ export class Clicker1Component implements OnInit {
   }
 
   add(): void {
-
-    this.clickService.summedClicks += 1;
+    this.clicks += 1;
+    this.clickService.sumClicks();
   }
 }
