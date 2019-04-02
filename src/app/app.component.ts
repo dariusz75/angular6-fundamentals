@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { ClickService } from './services/click.service';
+
 
 @Component({
   selector: 'app-root',
@@ -7,9 +7,42 @@ import { ClickService } from './services/click.service';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'Angular Services';
 
-  constructor(public clickService: ClickService) { }
+  constructor() { }
+
+  getPosts() {
+
+  }
+
+  getPost() {
+
+  }
+
+  getPostByUser() {
+
+  }
+
+  addPost() {
+
+  }
+
+  updatePost() {
+
+  }
+
+  deletePost() {
+
+  }
+
+  changePost() {
+
+  }
 
 }
 
+export interface Post {
+  userId?: number;
+  id?: number;
+  title?: string;
+  body?: string;
+}
