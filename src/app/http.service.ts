@@ -1,14 +1,14 @@
 import { Injectable } from '@angular/core';
 import { Post } from './app.component';
 import { Observable } from 'rxjs';
-import { HttpParams } from '@angular/common/http';
+import { HttpParams, HttpClient } from '@angular/common/http';
 
 @Injectable({
   providedIn: 'root'
 })
 export class HttpService {
 
-  constructor() { }
+  constructor(private http: HttpClient) { }
 
   getPosts() {
 
