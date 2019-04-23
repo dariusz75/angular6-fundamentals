@@ -43,6 +43,10 @@ export class AppComponent {
 
   }
 
+  clear() {
+    this.posts = [];
+  }
+
 }
 
 export interface Post {

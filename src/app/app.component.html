@@ -1,15 +1,22 @@
 <div class="container">
-  <button type="button" class="btn btn-primary" (click)="getPosts()">Get Posts</button>
-  <button type="button" class="btn btn-primary" (click)="getPost()">Get Post</button>
-  <button type="button" class="btn btn-primary" (click)="getPostByUser()">Get Post by User</button>
-  <button type="button" class="btn btn-primary" (click)="addPost()">Add Post</button>
-  <button type="button" class="btn btn-primary" (click)="updatePost()">Update Post</button>
-  <button type="button" class="btn btn-primary" (click)="deletePost()">Delete Post</button>
-  <button type="button" class="btn btn-primary" (click)="changePost()">Change Post</button>
+  <div class="row">
+    <button type="button" class="btn btn-primary" (click)="getPosts()">Get Posts</button>
+    <button type="button" class="btn btn-primary" (click)="getPost()">Get Post</button>
+    <button type="button" class="btn btn-primary" (click)="getPostByUser()">Get Post by User</button>
+    <button type="button" class="btn btn-primary" (click)="addPost()">Add Post</button>
+    <button type="button" class="btn btn-primary" (click)="updatePost()">Update Post</button>
+    <button type="button" class="btn btn-primary" (click)="deletePost()">Delete Post</button>
+    <button type="button" class="btn btn-primary" (click)="changePost()">Change Post</button>
+  </div>
+  <div class="row">
+    <button type="button" class="btn btn-primary" (click)="clear()">Clear</button>
+  </div>
 </div>
 
-<ul *ngFor="let post of posts">
-  <li>Post {{ post.id }}</li>
-  <li>Title {{ post.title }}</li>
-  <li>Boby {{ post.body }}</li>
-</ul>
+<div *ngIf="posts.length > 0 ">
+  <ul *ngFor="let post of posts">
+    <li>Post {{ post.id }}</li>
+    <li>Title {{ post.title }}</li>
+    <li>Boby {{ post.body }}</li>
+  </ul>
+</div>
