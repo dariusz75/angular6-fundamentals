@@ -14,8 +14,8 @@ export class HttpService {
     return this.http.get<Array<Post>>('https://jsonplaceholder.typicode.com/posts');
   }
 
-  getPost(id: number) {
-
+  getPost(id: number): Observable<Array<Post>> {
+    return this.http.get<Array<Post>>('https://jsonplaceholder.typicode.com/posts/' + id);
   }
 
   getPostByUser(userId: number) {

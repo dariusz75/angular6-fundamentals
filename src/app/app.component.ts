@@ -15,12 +15,13 @@ export class AppComponent {
   getPosts() {
     this.httpService.getPosts().subscribe(posts => {
       this.posts = posts;
-      console.log(this.posts);
     });
   }
 
   getPost() {
-
+    this.httpService.getPost(1).subscribe(post => {
+      this.posts.push(post);
+    });
   }
 
   getPostByUser() {
