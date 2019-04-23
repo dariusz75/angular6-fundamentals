@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-
+import { HttpService } from './http.service';
 
 @Component({
   selector: 'app-root',
@@ -8,10 +8,15 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
 
-  constructor() { }
+  posts = [];
+
+  constructor(private httpService: HttpService) { }
 
   getPosts() {
-
+    this.httpService.getPosts().subscribe(posts => {
+      this.posts = posts;
+      console.log(this.posts);
+    });
   }
 
   getPost() {
