@@ -18,8 +18,9 @@ export class HttpService {
     return this.http.get<Array<Post>>('https://jsonplaceholder.typicode.com/posts/' + id);
   }
 
-  getPostByUser(userId: number) {
-
+  getPostsByUser(userId: number): Observable<Array<Post>> {
+    const parameters = new HttpParams().set('userId', '1');
+    return this.http.get<Array<Post>>('https://jsonplaceholder.typicode.com/posts/', { params: parameters });
   }
 
   addPost(post: Post) {

@@ -24,8 +24,10 @@ export class AppComponent {
     });
   }
 
-  getPostByUser() {
-
+  getPostsByUser() {
+    this.httpService.getPostsByUser(1).subscribe(posts => {
+      this.posts = posts;
+    });
   }
 
   addPost() {
