@@ -23,8 +23,8 @@ export class HttpService {
     return this.http.get<Array<Post>>('https://jsonplaceholder.typicode.com/posts/', { params: parameters });
   }
 
-  addPost(post: Post) {
-
+  addPost(post: Post): Observable<Post> {
+    return this.http.post<Post>('https://jsonplaceholder.typicode.com/posts/', post);
   }
 
   updatePost(post: Post) {

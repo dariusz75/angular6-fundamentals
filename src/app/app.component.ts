@@ -31,6 +31,16 @@ export class AppComponent {
   }
 
   addPost() {
+    const myPost: Post = ({
+      userId: 1,
+      id: null,
+      title: 'Test post',
+      body: 'This is my test post'
+    });
+
+    this.httpService.addPost(myPost).subscribe(post => {
+      console.log(post);
+    });
 
   }
 
