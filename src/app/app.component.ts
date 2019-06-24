@@ -65,7 +65,14 @@ export class AppComponent {
   }
 
   changePost() {
+    const myPost: Post = ({
+      id: 1,
+      body: 'Only body has been replaced'
+    });
 
+    this.httpService.changePost(myPost).subscribe(post => {
+      console.log(post);
+    });
   }
 
   clear() {
