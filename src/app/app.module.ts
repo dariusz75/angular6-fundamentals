@@ -1,23 +1,29 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
+<<<<<<< HEAD
 
+=======
+>>>>>>> 15-http-put
 import { AppComponent } from './app.component';
-import { Clicker1Component } from './clicker1/clicker1.component';
-import { Clicker2Component } from './clicker2/clicker2.component';
+import { HttpService } from './http.service';
+import { HttpClientModule } from '@angular/common/http';
 
 
 @NgModule({
   declarations: [
-    AppComponent,
-    Clicker1Component,
-    Clicker2Component
+    AppComponent
   ],
   imports: [
     BrowserModule,
+<<<<<<< HEAD
     FormsModule
+=======
+    FormsModule,
+    HttpClientModule
+>>>>>>> 15-http-put
   ],
-  providers: [],
+  providers: [HttpService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

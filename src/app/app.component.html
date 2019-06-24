@@ -1,6 +1,24 @@
 <div class="container">
-  <h2>{{title}}</h2>
-  <h3>Total clicks: {{ clickService.summedClicks }}</h3>
-  <app-clicker1></app-clicker1>
-  <app-clicker2></app-clicker2>
+  <div class="row">
+    <button type="button" class="btn btn-primary" (click)="getPosts()">Get Posts</button>
+    <button type="button" class="btn btn-primary" (click)="getPost()">Get Post</button>
+    <button type="button" class="btn btn-primary" (click)="getPostsByUser()">Get Post by User</button>
+    <button type="button" class="btn btn-primary" (click)="addPost()">Add Post</button>
+    <button type="button" class="btn btn-primary" (click)="updatePost()">Update Post</button>
+    <button type="button" class="btn btn-primary" (click)="deletePost()">Delete Post</button>
+    <button type="button" class="btn btn-primary" (click)="changePost()">Change Post</button>
+  </div>
+  <div class="row">
+    <button type="button" class="btn btn-primary" (click)="clear()">Clear</button>
+  </div>
+</div>
+
+<div *ngIf="posts.length > 0 ">
+  <p>There is {{posts.length}} posts. </p>
+  <ul *ngFor="let post of posts">
+    <li>User ID {{ post.userId }}</li>
+    <li>Post ID {{ post.id }}</li>
+    <li>Title {{ post.title }}</li>
+    <li>Boby {{ post.body }}</li>
+  </ul>
 </div>

@@ -17,3 +17,7 @@ img {
 .color-3 {
   background-color: aqua;
 }
+
+button {
+  margin: 10px;
+}
