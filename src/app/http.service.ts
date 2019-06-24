@@ -27,8 +27,8 @@ export class HttpService {
     return this.http.post<Post>('https://jsonplaceholder.typicode.com/posts/', post);
   }
 
-  updatePost(post: Post) {
-
+  updatePost(post: Post): Observable<Post> {
+    return this.http.put<Post>('https://jsonplaceholder.typicode.com/posts/' + post.id, post);
   }
 
   deletePost(id: number) {

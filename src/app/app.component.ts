@@ -45,6 +45,16 @@ export class AppComponent {
   }
 
   updatePost() {
+    const myPost: Post = ({
+      userId: 1,
+      id: 1,
+      title: 'Test post replaced',
+      body: 'This is my test post that has been replaced'
+    });
+
+    this.httpService.updatePost(myPost).subscribe(post => {
+      console.log(post);
+    });
 
   }
 
